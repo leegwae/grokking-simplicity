@@ -145,5 +145,5 @@ function update_icons() {
 }
 ```
 
-- (TODO) 책에는 `itemPrice`를 인자로 받고 있다.`item`을 인자로 받아 `item.price`로 읽으면 이것도 암묵적 입력일까?
+- (TODO) 책에는 `itemPrice`를 인자로 받고 있다.`item`을 인자로 받아 `item.price`로 읽으면 이것도 암묵적 입력일까? 명시적 입력이다. 인자를 받아 변경하고 있지 않기 때문이다.
 
