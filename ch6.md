@@ -205,15 +205,7 @@ function objectDelete(object, key) {
 ## 중첩된 쓰기를 읽기로 바꾸기
 
 - 중첩된 데이터 구조의 최상위부터 최하위까지 불변해야 불변 데이터 구조다.
+- **"최하위부터 최상위까지 중첩된 데이터 구조의 모든 부분이 불변형이어야한다"  중첩된 데이터 구조는 deep copy해야되고 구조적 공유 하면 안되는 거 아닐가?** 그렇지 않다. 모든 객체에 대하여 카피-온-라이트 했다면 객체 내부의 중첩된 객체 역시 변경될 때 카피-온-라이트를 사용할 것이므로, 불변성을 지켜진다. deep copy할 필요가 없는 것이다.
 
-### 연습문제 p.144
 
-- p.140 최하위부터 최상위까지 중첩된 데이터 구조의 모든 부분이 불변형이어야한다 면 중첩된 데이터 구조는 deep copy해야되고 구조적 공유 하면 안되는 거 아님?
-- 아래 코드는 deep copy인가?
-
-```typescript
-function setQuantityByName(cart, name, quantity) {
-  return cart.map(({ _name, _quantity }) => ({ [_name]: _name === name ? quantity : _quantity }));
-}
-```
 
